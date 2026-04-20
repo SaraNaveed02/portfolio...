@@ -41,8 +41,9 @@ export default function AboutSection() {
             
             {/* Small Card 1 - Corrected Layout */}
             <motion.div className="relative overflow-hidden w-full min-h-[200px] sm:min-h-[250px] rounded-3xl border border-white/10 bg-[#020617] p-5 sm:p-8 flex flex-col justify-center"
-             initial={{rotate:0}}
-             whileHover={{rotate:2}}>
+              initial={{ rotateY: 0 }}
+              animate={{ rotateY: 0 }}
+              whileHover={{ rotateY: 15, rotate: -0.5 }}>
               <div className="absolute -top-10 -left-10 w-32 h-32 bg-blue-400/30 blur-[50px] rounded-full"></div>
               
               <div className="relative z-10">
@@ -60,8 +61,9 @@ export default function AboutSection() {
 
             {/* Small Card 2 - Corrected Layout */}
             <motion.div className="relative overflow-hidden w-full min-h-[200px] sm:min-h-[250px] rounded-3xl border border-white/10 bg-[#020617] p-5 sm:p-8 flex flex-col justify-center" 
-            initial={{rotate:0}}
-            whileHover={{rotate:2}}
+              initial={{ rotateY: 0 }}
+              animate={{ rotateY: 0 }}
+              whileHover={{ rotateY: 15, rotate: -0.5 }}
             >
               <div className="absolute -top-10 -left-10 w-32 h-32 bg-blue-400/30 blur-[50px] rounded-full"></div>
               

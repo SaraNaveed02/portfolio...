@@ -10,14 +10,49 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "Resume", href: "/resume" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Portfolio", href: "#portfolio" },
+    { name: "Resume", href: "#resume" },
+    { name: "Pricing", href: "#pricing" },
+    { name: "Contact", href: "#contact" },
   ];
+  const socialLinks = [
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/sara_naveed_3/",
+      icon: <FaInstagram />,
+    },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/sara-naveed-2102a42b6/",
+      icon: <FaLinkedinIn />,
+    },
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/sara.naveed.828167",
+      icon: <FaFacebookF />,
+    },
+  ];
+
+  const handleNavClick = (event, href) => {
+    if (!href.startsWith("#")) return;
+
+    event.preventDefault();
+    const targetSection = document.querySelector(href);
+    if (!targetSection) return;
+
+    const navbarOffset = 96;
+    const targetPosition =
+      targetSection.getBoundingClientRect().top + window.scrollY - navbarOffset;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth",
+    });
+    setIsOpen(false);
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full xl:max-w-7xl z-50 bg-black/40 backdrop-blur-md">
@@ -31,7 +66,11 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden lg:flex items-center gap-10 font-semibold">
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.href}>
+            <Link
+              key={link.name}
+              href={link.href}
+              onClick={(event) => handleNavClick(event, link.href)}
+            >
               <li className="hover:text-blue-500 transition duration-300 cursor-pointer">
                 {link.name}
               </li>
@@ -41,15 +80,18 @@ const Navbar = () => {
 
         {/* Social Icons Desktop */}
         <div className="hidden lg:flex gap-3">
-          <Link href="#" className="icon">
-            <FaInstagram />
-          </Link>
-          <Link href="#" className="icon">
-            <FaLinkedinIn />
-          </Link>
-          <Link href="#" className="icon">
-            <FaFacebookF />
-          </Link>
+          {socialLinks.map((social) => (
+            <a
+              key={social.name}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon"
+              aria-label={social.name}
+            >
+              {social.icon}
+            </a>
+          ))}
         </div>
 
         {/* Mobile Menu Button */}
@@ -69,7 +111,11 @@ const Navbar = () => {
       >
         <ul className="flex flex-col items-center gap-6 py-8 bg-black/90 backdrop-blur-lg font-semibold">
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.href} onClick={()=>setIsOpen(false)}>
+            <Link
+              key={link.name}
+              href={link.href}
+              onClick={(event) => handleNavClick(event, link.href)}
+            >
               <li className="hover:text-blue-500 transition duration-300">
                 {link.name}
               </li>
@@ -78,15 +124,19 @@ const Navbar = () => {
 
           {/* Social icons mobile */}
           <div className="flex gap-4 pt-4">
-            <a href="https://www.instagram.com/sara_naveed_3/" target="_blank" className="icon">
-              <FaInstagram />
-            </a>
-            <a href="https://www.linkedin.com/in/sara-naveed-2102a42b6/"target="_blank"  className="icon">
-              <FaLinkedinIn />
-            </a>
-            <a href="https://www.facebook.com/sara.naveed.828167" target="_blank" className="icon">
-              <FaFacebookF />
-            </a>
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon"
+                aria-label={social.name}
+                onClick={() => setIsOpen(false)}
+              >
+                {social.icon}
+              </a>
+            ))}
           </div>
         </ul>
       </div>

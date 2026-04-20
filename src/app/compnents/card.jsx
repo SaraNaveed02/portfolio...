@@ -40,6 +40,7 @@ export default function ProjectCard  ({ title, image, tags, link }) {
          <div className='m-2 w-fit bg-linear-to-'>
          <a 
             href={link} 
+            target='_blank'
             className="flex items-center gap-2 px-6 py-3 border border-slate-700 rounded-full font-semibold bg-linear-to-tr from-gray-500 via-black to-gray-500 backdrop-blur-sm text-white transition-all hover:bg-linear-to-tr hover:from-cyan-500 hover:via-transparent hover:to-cyan-500  hover:border-cyan-500 transition-all duration-300"
           >
             View Details

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import heroImage from "../../../public/image/heroimage.png";
 import Image from "next/image";
 import Button from "./Button";
+import {motion} from 'framer-motion'
 
 const Heropage = () => {
   const title = [
@@ -56,11 +57,17 @@ const Heropage = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-white w-full max-w-5xl">
-        <small className="text-xs sm:text-sm font-extralight uppercase tracking-widest">
+      <motion.div
+      initial={{y:300}}
+      animate={{y:0}}
+      transition={{duration: 0.5 }}
+      className="relative z-10 text-white w-full max-w-5xl">
+        <small 
+           className="text-xs sm:text-sm font-extralight uppercase tracking-widest">
           Hello
         </small>
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight mt-4 sm:mt-5">
+        <h1 
+           className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight mt-4 sm:mt-5">
           I'm Sara Naveed
         </h1>
         <div className="flex flex-wrap items-baseline gap-2 sm:gap-4 text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mt-3 sm:mt-4 max-w-3xl">
@@ -77,7 +84,7 @@ const Heropage = () => {
         <div>
           <Button value="View Portfolio ->" />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -24,6 +24,8 @@ const ExperienceHeader=()=> {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-3">
             <ResumeCard title={'Scentico'} years={"January-2026 to April-2026"}  para={"Developed the frontend for Scentico’s premium e-commerce store, focusing on Next.js performance, cinematic animations, and seamless user journeys."}/>
+            <ResumeCard title={'Virtual University of Pakistan'} years={"Present"}  para={"Software Engineering student focused on modern web development and building real-world projects to strengthen practical skills."}/>
+            <ResumeCard title={'SMIT ( saylani)'} years={"January-2025 to present"}  para={"Learning Modern Web and App Development from Saylani, focusing on building responsive websites and real-world projects to strengthen practical frontend skills."}/>
         </div>
       </section>
     );
