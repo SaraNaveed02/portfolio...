@@ -4,7 +4,7 @@ import PricingCard from "./pricingComponent";
 
 const PricingSection = () => {
   return (
-    <section className="text-white py-16 px-4">
+    <section className="text-white max-w-7xl py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
         
         {/* Small heading */}
