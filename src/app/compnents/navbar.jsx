@@ -55,7 +55,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full xl:max-w-7xl z-50 bg-black/40 backdrop-blur-md">
+    <header className="fixed top-0 inset-x-0 z-50 w-full bg-black/40 backdrop-blur-md">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between text-white">
         
         {/* Logo */}

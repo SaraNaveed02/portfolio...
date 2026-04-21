@@ -5,7 +5,7 @@ import Button from "./Button";
 
 export default function AboutSection() {
   return (
-    <section className="bg-[#020617] text-white py-14 sm:py-20 px-4 sm:px-6 lg:px-10 max-w-7xl overflow-x-hidden">
+    <section className="bg-[#020617] text-white py-14 sm:py-20 px-4 sm:px-6 lg:px-10 w-full max-w-7xl mx-auto overflow-x-hidden">
       <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 items-center max-w-7xl">
         
         {/* Left Side: Experience Card */}

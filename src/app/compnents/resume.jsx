@@ -2,7 +2,7 @@ import ResumeCard from './resumerCard'
 
 const ExperienceHeader=()=> {
     return (
-      <section className="bg-[#020617] text-white py-16 px-4 max-w-7xl">
+      <section className="bg-[#020617] text-white py-16 px-4 w-full max-w-7xl mx-auto">
         <div className="max-w-4xl mx-auto text-center">
           {/* Sub-heading */}
           <h4 className="text-[#00c2ff] uppercase tracking-[0.2em] text-sm font-bold mb-4">

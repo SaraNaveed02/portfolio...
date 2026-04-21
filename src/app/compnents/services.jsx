@@ -5,7 +5,7 @@ import image from "../../../public/image/image2.jpg";
 import Image from "next/image";
 const ServiceSection = () => {
   return (
-    <section className="bg-[#05070a] text-white py-20 px-6 md:px-12 max-w-7xl">
+    <section className="bg-[#05070a] text-white py-20 px-6 md:px-12 w-full max-w-7xl mx-auto">
       <div className="max-w-7xl mx-auto text-center mb-16">
         <span className="text-[#00c2ff] uppercase tracking-widest text-sm font-semibold">
           Latest Service

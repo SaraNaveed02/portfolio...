@@ -8,7 +8,7 @@ const ContactSection = () => {
   
 
   return (
-    <section  className="contact relative text-white py-20 px-6 overflow-hidden m-5  rounded-4xl">
+    <section className="bg-[#05070a] relative w-full max-w-7xl mx-auto my-5 text-white py-20 px-6 overflow-hidden rounded-4xl">
       {/* Top Left Glow Decor */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-cyan-600/70 blur-[120px] -z-10" />
 

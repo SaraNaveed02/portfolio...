@@ -13,7 +13,8 @@ export default function PortfolioSection() {
   const [activeTab, setActiveTab] = useState("All");
 
   return (
-    <section className="bg-[#020617] text-white py-12 sm:py-20 px-3 sm:px-4 flex flex-col items-center w-full max-w-7xl mx-auto">
+    <section className="w-full bg-[#020617] text-white">
+      <div className="mx-auto w-full max-w-7xl px-3 sm:px-4 py-12 sm:py-20 flex flex-col items-center">
       {/* Header Section */}
       <div className="max-w-3xl text-center mb-12">
         <h4 className="text-[#00c2ff] uppercase tracking-widest text-sm font-semibold mb-4">
@@ -51,6 +52,7 @@ export default function PortfolioSection() {
         <ProjectCard title={"Country Details"} image={project3} tags={["Fake API","Html/Css","React Js" ]} link="https://countries-details-chi.vercel.app/" />
         <ProjectCard title={"Maree"} image={project1} tags={["Framer Motion","Html/Css","React Js" ]} link="https://react-practice-two-rust.vercel.app/" />
         <ProjectCard title={"KababJess"} image={project4} tags={["Html/Css","Responsive","Javascript" ]} link="https://my-kababjees.netlify.app/" />
+      </div>
       </div>
 
     </section>

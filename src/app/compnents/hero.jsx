@@ -45,7 +45,7 @@ const Heropage = () => {
   }, [displayText, isDeleting, currentTitle, speed, title]);
 
   return (
-    <div className="relative min-h-full max-w-7xl flex items-center px-4 sm:px-6 lg:px-10 pt-24">
+    <div className="relative min-h-full w-full max-w-7xl mx-auto flex items-center px-4 sm:px-6 lg:px-10 pt-24">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image

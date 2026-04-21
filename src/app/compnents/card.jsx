@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function ProjectCard  ({ title, image, tags, link }) {
   return (
-    <div className="group relative max-w-7xl min-w-0 bg-[#020617] border border-slate-800 rounded-2xl sm:rounded-[2rem] md:rounded-[2.5rem] p-4 sm:p-6 transition-all duration-500 hover:border-cyan-500/50 h-full flex flex-col">
+    <div className="group relative w-full min-w-0 bg-[#020617] border border-slate-800 rounded-2xl sm:rounded-[2rem] md:rounded-[2.5rem] p-4 sm:p-6 transition-all duration-500 hover:border-cyan-500/50 h-full flex flex-col">
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none bg-[radial-gradient(circle_at_bottom,_rgba(0,194,255,0.40)_0%,_transparent_40%)] rounded-4xl" />
       
       {/* 1. Image Container */}
