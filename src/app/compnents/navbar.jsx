@@ -36,26 +36,32 @@ const Navbar = () => {
     },
   ];
 
-  const handleNavClick = (event, href) => {
-    if (!href.startsWith("#")) return;
-
+const handleNavClick = (event, href) => {
+  // agar section link hai (#about etc)
+  if (href.startsWith("#")) {
     event.preventDefault();
+
     const targetSection = document.querySelector(href);
     if (!targetSection) return;
 
     const navbarOffset = 96;
     const targetPosition =
-      targetSection.getBoundingClientRect().top + window.scrollY - navbarOffset;
+      targetSection.getBoundingClientRect().top +
+      window.scrollY -
+      navbarOffset;
 
     window.scrollTo({
       top: targetPosition,
       behavior: "smooth",
     });
-    setIsOpen(false);
-  };
+  }
+
+  // mobile menu close ho jaye har case me
+  setIsOpen(false);
+};
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 w-full bg-black/40 backdrop-blur-md">
+    <header className="fixed top-0 inset-x-0 z-50 w-full bg-black/40 backdrop-blur-md text-white">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between text-white">
         
         {/* Logo */}
@@ -105,11 +111,12 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden transition-all duration-300 ${
-          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+        className={`lg:hidden fixed top-0 left-0 w-full h-full z-50 transition-all duration-300 ${
+          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
+        style={{background: "rgba(0,0,0,0.95)"}}
       >
-        <ul className="flex flex-col items-center gap-6 py-8 bg-black/90 backdrop-blur-lg font-semibold">
+        <ul className="flex flex-col items-center gap-8 justify-center h-full font-semibold text-white text-2xl">
           {navLinks.map((link) => (
             <Link
               key={link.name}

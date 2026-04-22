@@ -58,9 +58,9 @@ const Heropage = () => {
 
       {/* Content */}
       <motion.div
-      initial={{y:300}}
-      animate={{y:0}}
-      transition={{duration: 0.5 }}
+       initial={{ y: 300, opacity: 0 }}
+       animate={{ y: 0, opacity: 1 }}
+       transition={{ duration: 0.8, ease: "easeOut" }}
       className="relative z-10 text-white w-full max-w-5xl">
         <small 
            className="text-xs sm:text-sm font-extralight uppercase tracking-widest">
